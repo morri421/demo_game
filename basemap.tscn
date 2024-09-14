@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=4 uid="uid://dqxeuvvvva4j1"]
+
+[ext_resource type="Texture2D" uid="uid://dvtqxj6dcn3i1" path="res://kenney_hexagon-pack/PNG/Tiles/Medieval/medieval_farm.png" id="1_4ycs3"]
+[ext_resource type="Texture2D" uid="uid://ckth7o0levbpr" path="res://kenney_hexagon-pack/PNG/Tiles/Medieval/medieval_house.png" id="2_op37s"]
+[ext_resource type="Texture2D" uid="uid://dix36c3pghomj" path="res://kenney_hexagon-pack/PNG/Tiles/Terrain/Dirt/dirt_03.png" id="3_ngk2b"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_76wtm"]
+resource_name = "Farm"
+texture = ExtResource("1_4ycs3")
+texture_region_size = Vector2i(120, 140)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbnhj"]
+texture = ExtResource("2_op37s")
+texture_region_size = Vector2i(120, 140)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8igx"]
+texture = ExtResource("3_ngk2b")
+texture_region_size = Vector2i(120, 140)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_biuun"]
+tile_shape = 3
+tile_size = Vector2i(120, 140)
+sources/0 = SubResource("TileSetAtlasSource_76wtm")
+sources/1 = SubResource("TileSetAtlasSource_hbnhj")
+sources/3 = SubResource("TileSetAtlasSource_p8igx")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-844, 183)
+tile_map_data = PackedByteArray("AAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAD///7/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAP//AAAAAAAAAAD/////AQAAAAAAAAD+////AQAAAAAAAAD+//7/AQAAAAAAAAD+//3/AQAAAAAAAAAAAPz/AQAAAAAAAAD///z/AQAAAAAAAAABAPz/AQAAAAAAAAABAP3/AQAAAAAAAAACAP//AQAAAAAAAAABAP//AQAAAAAAAAACAP7/AQAAAAAAAAABAPv/AQAAAAAAAAACAPz/AQAAAAAAAAADAP7/AwAAAAAAAAACAP3/AwAAAAAAAAAEAPz/AwAAAAAAAAADAPz/AwAAAAAAAAACAPv/AwAAAAAAAAA=")
+tile_set = SubResource("TileSet_biuun")
